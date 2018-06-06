@@ -1,6 +1,11 @@
+"""
+app/routes.py: uses the render_template() function
+"""
+from flask import render_template
 from app import app
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Welcome to flask API"
+    user = {'username': 'Macjohnan'}
+    return render_template("index.html", user=user)
