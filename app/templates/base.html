@@ -1,0 +1,18 @@
+<!--app/templates/base.html: Parent template for all html documents -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    {%if title%}
+    <title>{{title}} - Nekram 1.0</title>
+    {%else%}
+    <title>Welcome to Nekram 1.0</title>
+    {%endif%}
+</head>
+
+<body>
+    <div><a href="/index">Home</a></div>
+    <hr> {%block content%} {%endblock%}
+</body>
+
+</html>

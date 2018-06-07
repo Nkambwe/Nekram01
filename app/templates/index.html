@@ -1,17 +1,10 @@
 <!--app/templates/index.html: Main -->
-<!DOCTYPE html>
-<html>
-
-<head>
-    {%if title%}
-    <title>{{title}} - Nekram 1.0</title>
-    {%else%}
-    <title>Welcome to Nekram 1.0</title>
-    {%endif%}
-</head>
-
-<body>
-    <h1> Welcome {{user.username}} to flask API</h1>
-</body>
-
-</html>
+{%extends "base.html"%} {%block content%}
+<h1> Welcome {{user.username}} to Nekram Inc</h1>
+<div>
+    <h3>New Articles</h3>
+    {%for post in posts%}
+    <p><em>{{post.body}}</em> by {{post.author.username}}</p>
+    {%endfor%}
+</div>
+{%endblock%}
