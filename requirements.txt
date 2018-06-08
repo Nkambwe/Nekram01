@@ -1,3 +1,5 @@
 Flask==0.12
+flask-wtf==0.14.2
+WTForms==2.2.1
 click==4.1
 requests==2.13.0
